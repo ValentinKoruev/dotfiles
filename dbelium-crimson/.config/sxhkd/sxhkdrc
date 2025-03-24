@@ -1,0 +1,50 @@
+# Print screen keys
+
+Print; @Print
+    flameshot full --path ~/Screenshots
+
+shift + Print
+    flameshot gui --path ~/Screenshots
+
+ctrl + Print
+    flameshot full --clipboard --path ~/Screenshots
+
+ctrl + shift + Print
+    flameshot gui --clipboard --path ~/Screenshots
+
+
+# Media control keys
+
+shift + XF86AudioRaiseVolume
+    playerctl volume 0.1+
+
+shift + XF86AudioLowerVolume
+    playerctl volume 0.1-
+
+XF86AudioPlay; @XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioStop; @XF86AudioStop
+    playerctl stop
+
+XF86AudioPrev; @XF86AudioPrev
+    playerctl previous
+
+XF86AudioNext; @XF86AudioNext
+    playerctl next
+
+shift + XF86AudioNext
+    playerctld shift
+
+shift + XF86AudioNext
+    playerctld unshift
+
+# Shortcuts
+
+super + b
+    brave --no-startup-id
+
+super + v
+    code --no-startup-id
+
+

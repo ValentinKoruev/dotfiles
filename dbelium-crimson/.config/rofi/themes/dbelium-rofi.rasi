@@ -1,0 +1,87 @@
+* {
+
+    headerbg: #16161D;
+    bg: #28282B;
+    text: #ffffff;
+    // 8758FF;
+    bordercolor: #D2042D;
+    // #ff2975
+    // #7e4afe, #9136ff, #9136ff
+    selectedBg: #D2042D;
+    //linear-gradient(45deg, ...)
+
+    background-color: @bg;
+
+
+    padding: 0;
+    margin: 0;
+    spacing: 0;
+    border: 0;
+}
+
+window {
+    width: 40%;
+    border: 1px;
+    border-color: @bordercolor;
+    border-radius: 20px;
+}
+
+inputbar {
+    padding: 20px;
+    background-color: @headerbg;
+}
+
+entry {
+    placeholder: "Search here...";
+    cursor: pointer;
+    background-color: @headerbg;
+    text-color: @text;
+}
+
+case-indicator {
+    enabled: false;
+}
+
+prompt {
+    enabled: false;
+}
+
+listview {
+   columns: 1;
+   fixed-height: true;
+   lines: 8;
+   scrollbar: true;
+   padding: 0.5em 0;
+}
+
+scrollbar {
+    enabled: true;
+    handle-width: 4px;
+    handle-color: @headerbg;
+    background: @headerbg;
+}
+
+element {
+  orientation: horizontal;
+  children: [  element-icon, element-text ];
+  spacing: 5px;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 5px 1em;
+}
+
+element.selected {
+    background-color: @selectedBg;
+}
+
+element-icon {
+    background-color: #00000000;
+    size: 2em;
+    margin: 0.2em;
+}
+
+element-text {
+    background-color: #00000000;
+    vertical-align: 0.5;
+    text-color: @text;
+}
