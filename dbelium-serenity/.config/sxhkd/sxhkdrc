@@ -1,0 +1,64 @@
+# Print screen keys via flameshot
+
+Print; @Print
+    flameshot full --path ~/Screenshots
+
+shift + Print
+    flameshot gui --path ~/Screenshots
+
+ctrl + Print
+    flameshot full --clipboard --path ~/Screenshots
+
+ctrl + shift + Print
+    flameshot gui --clipboard --path ~/Screenshots
+
+
+# Media control keys
+
+shift + XF86AudioRaiseVolume
+    playerctl volume 0.1+
+
+shift + XF86AudioLowerVolume
+    playerctl volume 0.1-
+
+XF86AudioPlay; @XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioStop; @XF86AudioStop
+    playerctl stop
+
+XF86AudioPrev; @XF86AudioPrev
+    playerctl previous
+
+XF86AudioNext; @XF86AudioNext
+    playerctl next
+
+shift + XF86AudioNext
+    playerctld shift
+
+shift + XF86AudioNext
+    playerctld unshift
+
+XF86AudioRaiseVolume; @XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+XF86AudioLowerVolume; @XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -10%
+
+XF86AudioMute; @XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute; @XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+
+# Shortcuts
+
+super + b
+    brave --no-startup-id
+
+super + c
+    code --no-startup-id
+
+super + d
+    rofi --no-startup-id -modi drun,run -show drun -icon-theme 'Papirus' -show-icons
